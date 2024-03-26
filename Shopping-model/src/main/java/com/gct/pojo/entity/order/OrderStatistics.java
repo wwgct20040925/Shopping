@@ -1,6 +1,7 @@
 package com.gct.pojo.entity.order;
 
-import com.atguigu.spzx.model.entity.base.BaseEntity;
+
+import com.gct.pojo.entity.base.BaseEntity;
 import lombok.Data;
 
 import java.math.BigDecimal;
