@@ -35,5 +35,29 @@ public class Result<T> {
     public static <T> Result build(T body , ResultCodeEnum resultCodeEnum) {
         return build(body , resultCodeEnum.getCode() , resultCodeEnum.getMessage()) ;
     }
+    //构建成功的消息，code:200，message:操作成功  Data:自定义
+    public static <T> Result<T> success(T data) {
+        Result<T> resultData = new Result<>();
+        resultData.setCode(ResultCodeEnum.SUCCESS.getCode());
+        resultData.setMessage(ResultCodeEnum.SUCCESS.getMessage());
+        resultData.setData(data);
+        return resultData;
+    }
+
+    //构建失败的消息，code:通过ResultCodeEnum的枚举类获取，message:通过ResultCodeEnum的枚举类获取
+    public static <T> Result<T> fail(ResultCodeEnum resultCodeEnum) {
+        Result<T> resultData = new Result<>();
+        resultData.setCode(resultCodeEnum.getCode());
+        resultData.setMessage(resultCodeEnum.getMessage());
+        return resultData;
+    }
+
+    //构建失败的消息，code:通过ResultCodeEnum的枚举类获取，message:自定义
+    public static <T> Result<T> fail(ResultCodeEnum resultCodeEnum,String message) {
+        Result<T> resultData = new Result<>();
+        resultData.setCode(resultCodeEnum.getCode());
+        resultData.setMessage(message);
+        return resultData;
+    }
 
 }

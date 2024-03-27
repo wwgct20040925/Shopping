@@ -25,6 +25,7 @@
             <artifactId>fastjson</artifactId>
         </dependency>
 
+
         <dependency>
             <groupId>com.gct</groupId>
             <artifactId>Shopping-model</artifactId>

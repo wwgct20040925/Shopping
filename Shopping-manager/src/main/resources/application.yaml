@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: Shopping-manager
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name} #开启服务注册与发现
+        heartbeat:
+          enabled: true
+  profiles:
+    active: dev
