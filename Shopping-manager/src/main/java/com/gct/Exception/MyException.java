@@ -14,7 +14,10 @@ public class MyException extends Exception{
 
     public MyException(ResultCodeEnum resultCodeEnum) {
         this.resultCodeEnum = resultCodeEnum ;
-        this.code = resultCodeEnum.getCode() ;
+    }
+
+    public MyException(ResultCodeEnum resultCodeEnum,String message) {
+        this.resultCodeEnum = resultCodeEnum ;
         this.message = resultCodeEnum.getMessage();
     }
 

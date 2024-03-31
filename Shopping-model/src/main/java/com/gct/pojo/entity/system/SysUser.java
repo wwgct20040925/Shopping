@@ -10,6 +10,7 @@ import lombok.Data;
 public class SysUser extends BaseEntity {
 
 	@Schema(description = "用户名")
+//	@TableField("username")
 	private String userName;
 
 	@Schema(description = "密码")

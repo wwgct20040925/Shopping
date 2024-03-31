@@ -4,9 +4,9 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.gct.mapper.SysUserMapper">
 
-    <resultMap id="BaseResultMap" type="com.gct.pojo.SysUser">
+    <resultMap id="BaseResultMap" type="com.gct.pojo.entity.system.SysUser">
             <id property="id" column="id" jdbcType="BIGINT"/>
-            <result property="username" column="username" jdbcType="VARCHAR"/>
+            <result property="userName" column="user_name" jdbcType="VARCHAR"/>
             <result property="password" column="password" jdbcType="VARCHAR"/>
             <result property="name" column="name" jdbcType="VARCHAR"/>
             <result property="phone" column="phone" jdbcType="VARCHAR"/>
@@ -19,9 +19,18 @@
     </resultMap>
 
     <sql id="Base_Column_List">
-        id,username,password,
+        id,userName,password,
         name,phone,avatar,
         description,status,create_time,
         update_time,is_deleted
     </sql>
+
+    <delete id="deleteRoleUserByUserId">
+        DELETE * FROM sys_user_role WHERE sys_user_role.user_id=#{userId}
+    </delete>
+
+    <insert id="insertRoleUserByUserid">
+        insert
+    </insert>
+
 </mapper>

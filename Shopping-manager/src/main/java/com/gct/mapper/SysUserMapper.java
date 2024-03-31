@@ -1,7 +1,10 @@
 package com.gct.mapper;
 
-import com.gct.pojo.SysUser;
+
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.gct.pojo.entity.system.SysUser;
+
+import java.util.List;
 
 /**
 * @author 33980
@@ -11,6 +14,9 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 */
 public interface SysUserMapper extends BaseMapper<SysUser> {
 
+    void deleteRoleUserByUserId(Long userId);
+
+    void insertRoleUserByUserid(Long userId, List<Long> roleIdList);
 }
 
 

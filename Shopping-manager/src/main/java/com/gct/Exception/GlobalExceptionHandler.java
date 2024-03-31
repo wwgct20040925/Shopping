@@ -9,7 +9,8 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 public class GlobalExceptionHandler {
 
     @ExceptionHandler(Exception.class)
-    public Result Exception(){
+    public Result Exception(Exception e){
+        e.printStackTrace();
         return Result.build(null, ResultCodeEnum.DATA_ERROR);
     }
 

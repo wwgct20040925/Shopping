@@ -25,7 +25,7 @@
         <maven.compiler.source>20</maven.compiler.source>
         <maven.compiler.target>20</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <mysql.version>8.0.30</mysql.version>
+        <mysql.version>8.0.33</mysql.version>
         <fastjson.version>2.0.21</fastjson.version>
         <lombok.version>1.18.20</lombok.version>
         <mybatis.version>3.0.1</mybatis.version>

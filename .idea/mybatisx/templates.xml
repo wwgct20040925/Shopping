@@ -62,13 +62,13 @@
               </list>
             </option>
             <option name="needsModel" value="true" />
-            <option name="relativePackage" value="domain" />
+            <option name="relativePackage" value="pojo" />
             <option name="superClass" value="" />
             <option name="tableUIInfoList">
               <list>
                 <TableUIInfo>
-                  <option name="className" value="SysUser" />
-                  <option name="tableName" value="sys_user" />
+                  <option name="className" value="SysRole" />
+                  <option name="tableName" value="sys_role" />
                 </TableUIInfo>
               </list>
             </option>
